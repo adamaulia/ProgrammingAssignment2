@@ -3,13 +3,27 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix = function(x = matrix()) {
+    m = NULL
+    get = function(){
+        x 
+        } 
+    set_matrix = function(mean) {
+        m = mean 
+        }
+    get_matrix = function() {
+        m 
+        }
+    list(get = get, set_matrix = set_matrix, get_matrix = get_matrix)
 }
-
-
-## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+    
+    m <- x$get_matrix()
+    data <- x$get()
+    m <- mean(data, ...)
+    x$set_matrix(m)
+    
+    m
 }
