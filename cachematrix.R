@@ -3,7 +3,7 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix = function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
     ## this function for cache matrix 
     ## 
     
@@ -35,7 +35,7 @@ cacheSolve <- function(x, ...) {
                 return(m)
         }
     data <- x$get()
-    m <- mean(data, ...)
+    m <- solve(data, ...)
     x$set_matrix(m)
     
     m
